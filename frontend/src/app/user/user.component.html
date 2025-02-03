@@ -1,0 +1,84 @@
+<!-- <div class="container mt-4"> -->
+   
+  
+    <!-- Search by Name -->
+    <!-- <div class="mb-3">
+      <label>Search by name:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="nameSearch" name="nameSearch" placeholder="Enter name" required />
+        <button class="btn btn-primary" (click)="getUserData()">Search</button>
+      </div>
+    </div> -->
+  
+    <!-- Display User Data -->
+    <!-- <div *ngIf="userData" class="mt-4">
+      <h3>user Details</h3>
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>name</th>
+            <th>Technology</th>
+            <th>Graduation</th>
+            <th>Experience</th>
+            <th>Skills</th>
+            <th>Aadhar/PAN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ userData.name }}</td>
+            <td>{{ userData.technology }}</td>
+            <td>{{ userData.graduation }}</td>
+            <td>{{ userData.experience }}</td>
+            <td>{{ userData.skills }}</td>
+            <td>{{ userData.aadhar_pan }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+  
+    <!-- Add New User -->
+    <div class="container mt-4"> 
+      <div class="mt-4">
+        <h3 class="text-center">Add Details</h3>
+        <form (submit)="createUser()" class="shadow p-4 rounded" style="background: rgba(255, 255, 255, 0.6);">
+          <div class="row">
+            <div class="col-md-6">
+              <label>name:</label>
+              <input class="form-control" [(ngModel)]="newUser.name" name="name" required />
+            </div>
+            <div class="col-md-6">
+              <label>Technology:</label>
+              <input class="form-control" [(ngModel)]="newUser.technology" name="technology" required />
+            </div>
+          </div>
+      
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <label>Graduation:</label>
+              <input class="form-control" [(ngModel)]="newUser.graduation" name="graduation" required />
+            </div>
+            <div class="col-md-6">
+              <label>Experience (years):</label>
+              <input type="number" class="form-control" [(ngModel)]="newUser.experience" name="experience" required />
+            </div>
+          </div>
+      
+          <div class="mt-2">
+            <label>Skills:</label>
+            <input class="form-control" [(ngModel)]="newUser.skills" name="skills" required />
+          </div>
+      
+          <div class="mt-2">
+            <label>Aadhar/PAN:</label>
+            <input class="form-control" [(ngModel)]="newUser.aadhar_pan" name="aadhar_pan" required />
+          </div>
+      
+          <button type="submit" class="btn btn-success mt-3 w-100">Add User</button>
+        </form>
+      </div>
+    
+      <br/>
+      <button class="btn btn-primary" (click)="accessData()">Check Data</button>
+    </div>
+    

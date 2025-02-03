@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <h2 class="text-center">User Profile</h2><br/>
+    <button class="btn btn-secondary float-end" (click)="dashBoard()">DashBoard</button>
+  
+    <div *ngIf="userData" class="card mt-4 shadow-lg p-3 mb-5 bg-transparent rounded">
+      <div class="card-body">
+        <!-- Logo Section -->
+        <div class="logo-container text-center">
+          <img src="https://i.pinimg.com/564x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Logo" class="logo"/>
+        </div>
+  
+        <h5 class="card-title text-center">{{ userData.name }}</h5>
+        <hr>
+        <p><strong>ID:</strong> {{ userData.id }}</p>
+        <p><strong>Email:</strong> {{ userData.email }}</p>
+        <p><strong>Role:</strong> {{ userData.role }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="!userData" class="alert alert-warning mt-4">
+      No user data found.
+    </div>
+  </div><br/><br/>
+  

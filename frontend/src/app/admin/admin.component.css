@@ -1,0 +1,34 @@
+/* Transparency for the modal with 50% opacity */
+.transparent-modal {
+    background-color: rgba(255, 255, 255, 0); /* 50% transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Keep the shadow to give structure */
+    border-radius: 8px; /* Optional: To round the corners */
+    color: beige;
+  }
+  
+  .modal-content {
+    background-color: transparent; /* Ensure the content background is transparent */
+  }
+  
+  .modal-header, .modal-body {
+    background-color: transparent; /* Keep modal header and body transparent */
+  }
+  
+  .modal-header h5 {
+    color: #333; /* Dark color for the header text */
+  }
+  
+  button.btn-close {
+    opacity: 0.6; /* Button close opacity (for a softer look) */
+  }
+  
+  button.btn-close:hover {
+    opacity: 1; /* Button close opacity on hover */
+  }
+  
+
+  .float-end {
+    float: right;
+    margin-bottom: 15px; 
+  }
+  

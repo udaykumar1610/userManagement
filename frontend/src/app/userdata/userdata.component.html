@@ -1,0 +1,45 @@
+
+<div class="container mt-4">
+  <h2>User Details</h2>
+
+  <!-- Search Bar -->
+  <div class="mb-3">
+    <input 
+      type="text" 
+      class="form-control" 
+      [(ngModel)]="searchQuery" 
+      placeholder="Search by username or technology..." 
+      (input)="onSearch()"
+    />
+  </div>
+
+  <!-- Display User Data -->
+  <div *ngIf="userData.length > 0" class="mt-4">
+    <h3>Your Records</h3>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Username</th>
+          <th>Technology</th>
+          <th>Graduation</th>
+          <th>Experience</th>
+          <th>Skills</th>
+          <th>Aadhar/PAN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredData">
+          <td>{{ user.name }}</td>
+          <td>{{ user.technology }}</td>
+          <td>{{ user.graduation }}</td>
+          <td>{{ user.experience }}</td>
+          <td>{{ user.skills }}</td>
+          <td>{{ user.aadhar_pan }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-secondary mt-3" (click)="back()">Add Details</button>
+</div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+

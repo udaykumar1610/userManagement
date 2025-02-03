@@ -1,0 +1,30 @@
+
+
+/* Styling for the logo */
+.logo {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  /* Add some margin to the top of the page */
+  .container-fluid {
+    margin-top: 70px;
+  }
+  
+  /* Card Styling */
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    width: 100%;  /* Ensure the image takes up the full width of the card */
+    height: 200px;  /* Set a fixed height for the image */
+    object-fit: cover;  /* Ensure the image scales properly */
+    object-position: center center; /* Center the image in case of cropping */
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  

@@ -1,0 +1,112 @@
+<!-- <header class="bg-dark text-white fixed-top">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+     
+        <div class="col-md-3 d-flex align-items-center">
+          <a href="/" class="text-white">
+            <img src="https://sssjobs.in/wp-content/uploads/2016/02/South-Central-Railway-Recruitment-2016.jpg" alt="Logo" class="logo" />
+          </a>
+          <h1 class="ms-3 m-0">User Management</h1> 
+        </div>
+  
+       
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+              
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="/home">Home</a>
+                </li>
+  
+           
+                <ng-container *ngIf="!isLoggedIn">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/login">Sign In</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/register">Sign Up</a>
+                  </li>
+                </ng-container>
+  
+                
+                <ng-container *ngIf="isLoggedIn">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/profile">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                   
+                    <a class="nav-link text-white" href="#" (click)="onLogout()">Logout</a>
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header><br/><br/><br/>
+  
+  <router-outlet></router-outlet>
+   -->
+
+
+   <header class="bg-dark text-white fixed-top">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <!-- Logo Section (Left Side) -->
+        <div class="col-md-3 d-flex align-items-center">
+          <a href="/" class="text-white">
+            <img src="https://sssjobs.in/wp-content/uploads/2016/02/South-Central-Railway-Recruitment-2016.jpg" alt="Logo" class="logo" />
+          </a>
+          <h1 class="ms-3 m-0">User Management</h1> <!-- "User Management" beside the logo -->
+        </div>
+  
+        <!-- Navbar Section (Right Side) -->
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <!-- Common Nav Items -->
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="/home">Home</a>
+                </li>
+  
+                <!-- Show Sign In and Sign Up if not logged in -->
+                <ng-container *ngIf="!isLoggedIn">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/login">Sign In</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/register">Sign Up</a>
+                  </li>
+                </ng-container>
+  
+                <!-- Show Profile and Logout if logged in -->
+                <ng-container *ngIf="isLoggedIn">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/profile">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- Trigger the logout function on click -->
+                    <a class="nav-link text-white" href="#" (click)="onLogout()">Logout</a>
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <br /><br /><br />
+  
+  <!-- Router Outlet for page content -->
+  <router-outlet></router-outlet>
+  

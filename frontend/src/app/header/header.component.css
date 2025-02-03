@@ -1,0 +1,90 @@
+/* 
+header {
+    padding: 15px 0;  
+  }
+  
+  header .logo {
+    max-width: 50px;  
+    height: auto;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;  
+    margin: 0;
+  }
+  
+  header .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .navbar {
+    padding: 0;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    header .logo {
+      max-width: 100px;  
+    }
+  
+    header h1 {
+      font-size: 1.5rem;  
+    }
+  }
+  
+
+  img{
+    height: 100%;
+    width:100%;
+    border-radius: 20px;
+
+  } */
+
+
+  /* Header styles */
+header {
+  padding: 10px 0; /* Adjust padding for header */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Space between logo and navbar */
+  background-color: #343a40; /* Dark background for header */
+  height: 60px; /* Set fixed height for the header */
+}
+
+header .logo {
+  max-height: 50px; /* Set max height for the logo */
+  width: auto; /* Maintain aspect ratio of the logo */
+}
+
+header h1 {
+  font-size: 1.8rem; /* Font size for the "User Management" text */
+  margin-left: 10px; /* Space between logo and title */
+  color: white;
+}
+
+header .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+/* Adjust navbar for mobile screens */
+@media (max-width: 768px) {
+  header .logo {
+    max-height: 80px; /* Reduce logo size on mobile */
+    max-width: 80px; 
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+}
+
+
+img{
+  border-radius: 20px;
+}

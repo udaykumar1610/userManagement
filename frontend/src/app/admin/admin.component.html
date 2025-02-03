@@ -1,0 +1,94 @@
+<div class="container mt-4">
+  <!-- User Table -->
+  <button class="btn btn-secondary float-end"  (click)="usersData()"> users Data</button>
+  <table class="table table-bordered mt-3">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Technology</th>
+        <th>Graduation</th>
+        <th>Experience</th>
+        <th>Skills</th>
+        <th>Aadhar/PAN</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.technology }}</td>
+        <td>{{ user.graduation }}</td>
+        <td>{{ user.experience }}</td>
+        <td>{{ user.skills }}</td>
+        <td>{{ user.aadhar_pan }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" (click)="editUser(user)" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal for Edit Form -->
+  <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content transparent-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editUserModalLabel" style="color:white">Edit User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form *ngIf="selectedUser" (submit)="updateUser()">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Username:</label>
+                <input class="form-control" [(ngModel)]="selectedUser.name" name="username" required />
+              </div>
+              <div class="col-md-6">
+                <label>Technology:</label>
+                <input class="form-control" [(ngModel)]="selectedUser.technology" name="technology" required />
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <label>Graduation:</label>
+                <input class="form-control" [(ngModel)]="selectedUser.graduation" name="graduation" required />
+              </div>
+              <div class="col-md-6">
+                <label>Experience (years):</label>
+                <input type="number" class="form-control" [(ngModel)]="selectedUser.experience" name="experience" required />
+              </div>
+            </div>
+
+            <div class="mt-2">
+              <label>Skills:</label>
+              <input class="form-control" [(ngModel)]="selectedUser.skills" name="skills" required />
+            </div>
+
+            <div class="mt-2">
+              <label>Aadhar/PAN:</label>
+              <input class="form-control" [(ngModel)]="selectedUser.aadhar_pan" name="aadhar_pan" required />
+            </div>
+
+            <button type="submit" class="btn btn-success mt-3">Update</button>
+            <button type="button" class="btn btn-secondary mt-3 ms-2" data-bs-dismiss="modal">Cancel</button>
+          </form>
+        
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

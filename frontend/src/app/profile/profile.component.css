@@ -1,0 +1,38 @@
+.card {
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    backdrop-filter: blur(10px); /* Adding blur effect to the background */
+  }
+  
+  .card-body {
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  h5 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+  
+  .logo {
+    max-width: 100px; /* Size of the logo */
+    height: auto;
+  }
+  
+  hr {
+    border-top: 1px solid #ccc;
+  }
+  
+  .alert-warning {
+    font-size: 16px;
+    text-align: center;
+  }
+  
